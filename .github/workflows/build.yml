@@ -1,5 +1,5 @@
 name: Build
-on:
+on: [ push, pull_request ]
   push:
     branches:
       - main
@@ -8,7 +8,7 @@ on:
 jobs:
   sonarqube:
     name: SonarQube
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
