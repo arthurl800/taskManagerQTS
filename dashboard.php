@@ -1,9 +1,9 @@
 <?php
     
-  include('./php/db/conexao.php'); 
+  include './php/db/conexao.php';
   
   // Caso o usuário não esteja logado, redireciona para o index
-  include('./php/db/verificar_login.php');
+  include_once './php/db/verificar_login.php';
 
   $id_user = $_SESSION['id'];
   

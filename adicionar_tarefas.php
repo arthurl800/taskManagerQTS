@@ -1,7 +1,8 @@
 <?php
   
   // Caso o usuário não esteja logado, redireciona para o index
-  include('./php/db/verificar_login.php');
+  include_once './php/db/verificar_login.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
