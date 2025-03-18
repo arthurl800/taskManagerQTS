@@ -1,6 +1,6 @@
 <?php
     
-  include('./php/db/conexao.php'); 
+  include('./php/db/conexao.php');
   
   // Caso o usuário não esteja logado, redireciona para o index
   include('./php/db/verificar_login.php');
@@ -10,9 +10,9 @@
   // verificando se está sendo passado por parâmetro algum valor de busca
   if (isset($_GET['busca'])) {
     $dataCompleta = $_GET['busca'];
-    $dia = explode("/",$dataCompleta)[0];
-    $mes = explode("/",$dataCompleta)[1];
-    $ano = explode("/",$dataCompleta)[2];
+    $dia = explode("/", $dataCompleta)[0];
+    $mes = explode("/", $dataCompleta)[1];
+    $ano = explode("/", $dataCompleta)[2];
     $busca = $ano.'-'.$mes.'-'.$dia;
   } else {
     $busca = '';
@@ -75,7 +75,7 @@
 
 </head>
 <body>
-  <section id="dashboard">    
+  <section id="dashboard">
     <header>
       <div class="container">
         <a href="dashboard.php" class="logotipo">
@@ -93,7 +93,7 @@
             <a href="./php/db/logout.php">
               <i class="fa fa-sign-out fa-lg fa-fw icone" aria-hidden="true"></i>
             </a>
-          </div>          
+          </div>
         </div>
       </div>
     </header>
@@ -128,7 +128,7 @@
             <?php
               // se o número de linhas vindos do query for maior que zero, executa o loop
               echo '<h1 class="mobile-title" style="margin: -5px 0 20px;">Pendentes</h1>';
-              if($iPendentes > 0) {
+              if ($iPendentes > 0) {
                 // inicia o loop que vai mostrar todos os dados
                 do {
             ?>
@@ -175,7 +175,7 @@
             <?php
             // finaliza o loop que vai mostrar os dados
                 }while($arrayTarefasPendentes = mysqli_fetch_assoc($resultPendentes));
-              // fim do if 
+              // fim do if
               } else {
                 echo '<h1 class="no-task">Adicione uma tarefa!</h1>';
               }
@@ -186,7 +186,7 @@
             <?php
               // se o número de linhas vindos do query for maior que zero, executa o loop
               echo '<h1 class="mobile-title" style="margin: 40px 0 20px">Concluídas</h1>';
-              if($iConcluidas > 0) {
+              if ($iConcluidas > 0) {
                 // inicia o loop que vai mostrar todos os dados
                 do {
             ?>
@@ -230,7 +230,7 @@
             <?php
             // finaliza o loop que vai mostrar os dados
                 }while($arrayTarefasConcluidas = mysqli_fetch_assoc($resultConcluidas));
-              // fim do if 
+              // fim do if
               } else {
                 echo '<h1 class="no-task">Nenhuma tarefa foi concluída!</h1>';
               }

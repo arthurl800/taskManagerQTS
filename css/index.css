@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body, h1, h2, ul, ul, p, dd, dt, dl {
+body, h1, h2, ul, p, dd, dt, dl {
   margin: 0;
   padding: 0;
 }
