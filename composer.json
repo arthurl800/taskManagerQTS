@@ -1,5 +1,6 @@
 {
     "require-dev": {
-        "php": "*"
+        "php": "*",
+        "phpunit/phpunit": "^12.0"
     }
 }
