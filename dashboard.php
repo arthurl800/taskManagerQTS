@@ -8,13 +8,13 @@
   include('./php/db/verificar_login.php');
 
   //TESTE
-  class dashboardTest extends TestCase
-  {
-
-    public function testDashboard(){
-      
-    }
-  }
+  // class dashboardTest extends TestCase
+  // {
+  //
+  //  public function testDashboard(){
+  //    
+  //  }
+  //}
 
   $id_user = $_SESSION['id'];
   
