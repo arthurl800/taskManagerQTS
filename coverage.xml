@@ -1,1 +1,0 @@
-XDEBUG_MODE=coverage phpunit — coverage-clover coverage.xml — log-junit tests.xml
