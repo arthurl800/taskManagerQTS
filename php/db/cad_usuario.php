@@ -4,7 +4,7 @@
 session_start();
 
 // incluindo a conexao
-include('./conexao.php'); 
+include('./conexao.php');
 
 // guardando os valores inseridos no formuário
 $nome = mysqli_real_escape_string($conexao, $_POST['nome']);

@@ -31,8 +31,8 @@
 
   // SELECT DAS TAREFAS PENDENTES
   // guardando o comando em uma variável
-  $queryPendentes = "SELECT id_task, title_task, description_task, date_task, time_task 
-  FROM task WHERE id_user = '{$id_user}' AND status_task = 'pendente' 
+  $queryPendentes = "SELECT id_task, title_task, description_task, date_task, time_task
+  FROM task WHERE id_user = '{$id_user}' AND status_task = 'pendente'
   AND date_task LIKE '%{$busca}%' ORDER BY date_task, time_task ASC";
 
   // enviando o query para o banco
@@ -47,8 +47,8 @@
 
   // SELECT DAS TAREFAS CONCLUÍDAS
   // guardando o comando em uma variável
-  $queryConcluidas = "SELECT id_task, title_task, description_task, date_task, time_task 
-  FROM task WHERE id_user = '{$id_user}' AND status_task = 'concluida' 
+  $queryConcluidas = "SELECT id_task, title_task, description_task, date_task, time_task
+  FROM task WHERE id_user = '{$id_user}' AND status_task = 'concluida'
   AND date_task LIKE '%{$busca}%' ORDER BY date_task, time_task ASC";
 
   // enviando o query para o banco
@@ -152,7 +152,7 @@
 
               </div>
               <dt class="header">
-                <a href="./php/db/edit_tarefas_pendentes.php?id_task=<?= $arrayTarefasPendentes['id_task']?>" 
+                <a href="./php/db/edit_tarefas_pendentes.php?id_task=<?= $arrayTarefasPendentes['id_task']?>"
                 class="check">
                   <i class="fa fa-check fa-lg fa-fw" aria-hidden="true"></i>
                 </a>
@@ -172,7 +172,7 @@
                     <span><?php echo $arrayTarefasPendentes['date_task'];?></span>
                   </div>
                   <div class="hora">
-                    <img src="https://image.flaticon.com/icons/svg/1124/1124602.svg"></i>
+                    <img src="https://image.flaticon.com/icons/svg/1124/1124602.svg" alt="icone"> </i>
                     <span><?php echo $arrayTarefasPendentes['time_task'];?></span>
                   </div>
                 </div>
@@ -180,7 +180,7 @@
                   <a href="./editar_tarefas.php?id_task=<?= $arrayTarefasPendentes['id_task']?>" class="editar">
                     <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true"></i>
                   </a>
-                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasPendentes['id_task'];?>" 
+                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasPendentes['id_task'];?>"
                   class="excluir">
                     <i class="fa fa-trash fa-lg fa-fw" aria-hidden="true"></i>
                   </a>
@@ -209,7 +209,7 @@
 
             <dl class="card js-card checked">
               <dt class="header">
-                <a href="./php/db/edit_tarefas_concluidas.php?id_task=<?= $arrayTarefasConcluidas['id_task']?>" 
+                <a href="./php/db/edit_tarefas_concluidas.php?id_task=<?= $arrayTarefasConcluidas['id_task']?>"
                 class="check checked">
                   <i class="fa fa-check fa-lg fa-fw" aria-hidden="true"></i>
                 </a>
@@ -229,7 +229,7 @@
                     <span><?php echo $arrayTarefasConcluidas['date_task'];?></span>
                   </div>
                   <div class="hora">
-                    <img src="https://image.flaticon.com/icons/svg/1124/1124602.svg"></i>
+                    <img src="https://image.flaticon.com/icons/svg/1124/1124602.svg" alt="icone"></i>
                     <span><?php echo $arrayTarefasConcluidas['time_task'];?></span>
                   </div>
                 </div>
@@ -237,7 +237,7 @@
                   <a href="./editar_tarefas.php?id_task=<?= $arrayTarefasConcluidas['id_task']?>" class="editar">
                     <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true"></i>
                   </a>
-                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasConcluidas['id_task'];?>" 
+                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasConcluidas['id_task'];?>"
                   class="excluir">
                     <i class="fa fa-trash fa-lg fa-fw" aria-hidden="true"></i>
                   </a>

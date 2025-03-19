@@ -4,10 +4,10 @@
 session_start();
 
 // incluindo a conexao
-include('./conexao.php'); 
+include('./conexao.php');
 
 // evitando que o usuario acesso a pagina de dashboard sem fazer o login
-if(empty($_POST['email']) || empty($_POST['senha'])) {
+if (empty($_POST['email']) || empty($_POST['senha'])) {
   header('Location: ../../index.php');
   exit();
 }
@@ -28,7 +28,7 @@ $row = mysqli_num_rows($result);
 
 if ($row == 1) {
   // se estiver autenticado, guarda em sessões os valores obtidos pelo query e redireciona para a página de login.
-  while ($rows = mysqli_fetch_assoc($result)) { 
+  while ($rows = mysqli_fetch_assoc($result)) {
     $_SESSION['id'] = $rows['id_user'];
     $_SESSION['nome'] = $rows['nome_user'];
   };
@@ -39,4 +39,4 @@ if ($row == 1) {
   header('Location: ../../index.php?erro=login');
 }
 
-
+?>

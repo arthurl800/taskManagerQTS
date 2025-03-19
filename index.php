@@ -22,15 +22,15 @@
       <div class="left">
         
       </div>
-      <div class="right">       
-        <div class="form" data-form="login">           
+      <div class="right">
+        <div class="form" data-form="login">
           <form action="./php/db/login.php" method="POST">
             <h1>Bem-vindo ao<span>Task Manager!</span></h1>
 
             <!-- Mensagem de erro -->
             <?php
-              if(isset($_SESSION['nao_autenticado_login'])) {
-            ?>  
+              if (isset($_SESSION['nao_autenticado_login'])) {
+            ?>
             <div class="erro">
               <div class="icone">
                 <i class="fa fa-exclamation fa-lg fa-fw" aria-hidden="true"></i>
@@ -46,11 +46,11 @@
             <div class="input">
               <input name="email" type="email" placeholder="E-mail*" required>
               <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-            </div>            
+            </div>
             <div class="input">
               <input name="senha" type="password" placeholder="Senha*" required>
               <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
-            </div>        
+            </div>
             
             <div class="botoes">
               <button type="submit">Entrar</button>
@@ -65,8 +65,8 @@
 
             <!-- Mensagem de erro -->
             <?php
-              if(isset($_SESSION['nao_autenticado_cadastro'])) {
-            ?>  
+              if (isset($_SESSION['nao_autenticado_cadastro'])) {
+            ?>
             <div class="erro">
               <div class="icone">
                 <i class="fa fa-exclamation fa-lg fa-fw" aria-hidden="true"></i>
@@ -82,15 +82,15 @@
             <div class="input">
               <input name="nome" type="text" placeholder="Nome e sobrenome*" required>
               <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-            </div>  
+            </div>
             <div class="input">
               <input name="email" type="email" placeholder="E-mail*" required>
               <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-            </div>            
+            </div>
             <div class="input">
               <input name="senha" type="password" placeholder="Senha*" required>
               <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
-            </div>        
+            </div>
             
             <div class="botoes">
               <a href="#">Voltar</a>
