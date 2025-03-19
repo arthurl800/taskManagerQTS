@@ -2,5 +2,8 @@
     "require-dev": {
         "php": "*",
         "phpunit/phpunit": "^12.0"
+    },
+    "require": {
+        "twbs/bootstrap": "5.0.2"
     }
 }
