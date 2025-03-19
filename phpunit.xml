@@ -1,45 +1,17 @@
-<?xml version="1.0"  encoding="UTF-8" ?>
-<phpunit bootstrap="bootstrap.php"
-         backupGlobals               = "false"
-         backupStaticAttributes      = "false"
-         colors                      = "true"
-         verbose                     = "true"
-         convertErrorsToExceptions   = "true"
-         convertNoticesToExceptions  = "true"
-         convertWarningsToExceptions = "true"
-         processIsolation            = "false"
-         syntaxCheck                 = "false"
-         stopOnFailure               = "false">
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
     <testsuites>
-        <testsuite name="Project Test Suite">
-            <directory>../tests</directory>
+        <testsuite name="Application Test Suite">
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist addUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">../../../../../../../api/rest/app</directory>
-        </whitelist>
-    </filter>
- <!--
- <filter>
-  <blacklist>
-   <directory suffix=".php">../../../lib</directory>
-   <directory suffix=".php">.</directory>
-  </blacklist>
- </filter>
- -->
-    <coverage includeUncoveredFiles     ="true"
-              pathCoverage              ="true"
-              ignoreDeprecatedCodeUnits ="true"
-              processUncoveredFiles     ="true">
-        <include>
-            <directory suffix=".php">../../../../../../../api/rest/app</directory>
-        </include>
-  <report>
-         <clover outputFile="$(System.DefaultWorkingDirectory)/api/rest/app/protected/tests/coverage.xml"/>
+    <coverage>
+        <report>
+            <clover outputFile="build/logs/clover.xml"/>
         </report>
     </coverage>
- <logging>
-        <junit outputFile="$(System.DefaultWorkingDirectory)/api/rest/app/protected/tests/tests.xml"/>
-    </logging>
 </phpunit>

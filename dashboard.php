@@ -1,9 +1,20 @@
 <?php
+
+  use PHPUnit\Framework\TestCase;
     
   include('./php/db/conexao.php');
   
   // Caso o usuário não esteja logado, redireciona para o index
   include('./php/db/verificar_login.php');
+
+  //TESTE
+  class dashboardTest extends TestCase
+  {
+
+    public function testDashboard(){
+      
+    }
+  }
 
   $id_user = $_SESSION['id'];
   
