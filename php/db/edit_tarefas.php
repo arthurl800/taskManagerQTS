@@ -15,7 +15,8 @@ $id_user = $_SESSION['id'];
 $id_task = mysqli_real_escape_string($conexao, $_POST['id_task']);
 
 // guardando o comando em uma variável
-$query = "UPDATE task SET title_task = '{$title}', description_task = '{$description}', date_task = '{$date}', time_task = '{$time}' WHERE id_user = '{$id_user}' AND id_task = '{$id_task}'";
+$query = "UPDATE task SET title_task = '{$title}', description_task = '{$description}', 
+date_task = '{$date}', time_task = '{$time}' WHERE id_user = '{$id_user}' AND id_task = '{$id_task}'";
 
 // enviando o query para o banco
 $result = mysqli_query($conexao, $query);

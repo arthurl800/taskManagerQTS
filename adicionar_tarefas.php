@@ -35,7 +35,8 @@
           <textarea id="description" name="description" maxlength="250" cols="30" rows="10"
           placeholder="Digite uma breve descrição"></textarea>
           <div class="contador-de-caracteres" style="background-color: white; color: var(--principal);
-          position: absolute; bottom: 10px; right: 10px; font-size: 14px;"><span class="caracteres">250</span> caracteres restantes</div>
+          position: absolute; bottom: 10px; right: 10px; font-size: 14px;">
+          <span class="caracteres">250</span> caracteres restantes</div>
         </div>
 
         <div class="input-data-hora">

@@ -31,7 +31,9 @@
 
   // SELECT DAS TAREFAS PENDENTES
   // guardando o comando em uma variável
-  $queryPendentes = "SELECT id_task, title_task, description_task, date_task, time_task FROM task WHERE id_user = '{$id_user}' AND status_task = 'pendente' AND date_task LIKE '%{$busca}%' ORDER BY date_task, time_task ASC";
+  $queryPendentes = "SELECT id_task, title_task, description_task, date_task, time_task 
+  FROM task WHERE id_user = '{$id_user}' AND status_task = 'pendente' 
+  AND date_task LIKE '%{$busca}%' ORDER BY date_task, time_task ASC";
 
   // enviando o query para o banco
   $resultPendentes = mysqli_query($conexao, $queryPendentes);
@@ -45,7 +47,9 @@
 
   // SELECT DAS TAREFAS CONCLUÍDAS
   // guardando o comando em uma variável
-  $queryConcluidas = "SELECT id_task, title_task, description_task, date_task, time_task FROM task WHERE id_user = '{$id_user}' AND status_task = 'concluida' AND date_task LIKE '%{$busca}%' ORDER BY date_task, time_task ASC";
+  $queryConcluidas = "SELECT id_task, title_task, description_task, date_task, time_task 
+  FROM task WHERE id_user = '{$id_user}' AND status_task = 'concluida' 
+  AND date_task LIKE '%{$busca}%' ORDER BY date_task, time_task ASC";
 
   // enviando o query para o banco
   $resultConcluidas = mysqli_query($conexao, $queryConcluidas);
@@ -148,7 +152,8 @@
 
               </div>
               <dt class="header">
-                <a href="./php/db/edit_tarefas_pendentes.php?id_task=<?= $arrayTarefasPendentes['id_task']?>" class="check">
+                <a href="./php/db/edit_tarefas_pendentes.php?id_task=<?= $arrayTarefasPendentes['id_task']?>" 
+                class="check">
                   <i class="fa fa-check fa-lg fa-fw" aria-hidden="true"></i>
                 </a>
                 <h1><?php echo $arrayTarefasPendentes['title_task'];?></h1>
@@ -175,7 +180,8 @@
                   <a href="./editar_tarefas.php?id_task=<?= $arrayTarefasPendentes['id_task']?>" class="editar">
                     <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true"></i>
                   </a>
-                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasPendentes['id_task'];?>" class="excluir">
+                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasPendentes['id_task'];?>" 
+                  class="excluir">
                     <i class="fa fa-trash fa-lg fa-fw" aria-hidden="true"></i>
                   </a>
                 </div>
@@ -203,7 +209,8 @@
 
             <dl class="card js-card checked">
               <dt class="header">
-                <a href="./php/db/edit_tarefas_concluidas.php?id_task=<?= $arrayTarefasConcluidas['id_task']?>" class="check checked">
+                <a href="./php/db/edit_tarefas_concluidas.php?id_task=<?= $arrayTarefasConcluidas['id_task']?>" 
+                class="check checked">
                   <i class="fa fa-check fa-lg fa-fw" aria-hidden="true"></i>
                 </a>
                 <h1 class="riscado"><?php echo $arrayTarefasConcluidas['title_task'];?></h1>
@@ -230,7 +237,8 @@
                   <a href="./editar_tarefas.php?id_task=<?= $arrayTarefasConcluidas['id_task']?>" class="editar">
                     <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true"></i>
                   </a>
-                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasConcluidas['id_task'];?>" class="excluir">
+                  <a href="./php/db/deletar_tarefas.php?id_task=<?php echo $arrayTarefasConcluidas['id_task'];?>" 
+                  class="excluir">
                     <i class="fa fa-trash fa-lg fa-fw" aria-hidden="true"></i>
                   </a>
                 </div>
