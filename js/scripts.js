@@ -149,7 +149,7 @@ function initAvisoPrazo() {
     }
   
     if ((anoCard == ano) && (mesCard == mes) && (diaCard == dia)) {
-      if (horaCard !== 00) {
+      if (horaCard !== 0o0) {
         if ((horaCard < hora)) {
           dataCard.parentElement.parentElement.parentElement.parentElement.firstElementChild.classList.add('bolinha');
         }
