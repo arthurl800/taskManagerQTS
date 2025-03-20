@@ -1,0 +1,1 @@
+{"version":1,"defects":{"VerificarLoginTest::testRedirecionarSeNaoEstiverLogado":4,"VerificarLoginTest::testNaoRedirecionarSeEstiverLogado":4},"times":{"VerificarLoginTest::testRedirecionarSeNaoEstiverLogado":0.003,"VerificarLoginTest::testNaoRedirecionarSeEstiverLogado":0}}

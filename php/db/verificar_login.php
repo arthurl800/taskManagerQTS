@@ -9,4 +9,3 @@ if (!$_SESSION['nome']) {
   exit();
 }
 
-?>

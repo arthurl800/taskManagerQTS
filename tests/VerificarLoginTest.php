@@ -11,7 +11,7 @@ class VerificarLoginTest extends TestCase
 
         // Captura o output gerado por "verificar_login.php"
         ob_start();
-        include('./php/db/verificar_login.php');
+        include(__DIR__ . '/../php/db/verificar_login.php');
         $output = ob_get_clean();
 
         // Verifica se há um redirecionamento para a página index
@@ -25,7 +25,7 @@ class VerificarLoginTest extends TestCase
 
         // Captura o output gerado por "verificar_login.php"
         ob_start();
-        include('./php/db/verificar_login.php');
+        include(__DIR__ . '/../php/db/verificar_login.php');
         $output = ob_get_clean();
 
         // Verifica se o redirecionamento não ocorreu (ou seja, nenhuma string com "Location: index.php" deve estar presente)
